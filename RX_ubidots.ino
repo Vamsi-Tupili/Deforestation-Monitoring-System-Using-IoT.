@@ -3,9 +3,9 @@
 /****************************************
  * Define Constants
  ****************************************/
-#define TOKEN "BBUS-jpha0xcVRxL3zk2PwFlWc2LfRzzlu8" // Your Ubidots TOKEN
+#define TOKEN "BBUS-jpha0xcVRxL3zk2PwFlWc2LfR****" // Your Ubidots TOKEN
 #define WIFINAME "Vamsi" //Your SSID
-#define WIFIPASS "012345679" // Your Wifi Pass
+#define WIFIPASS "0123456789" // Your Wifi Pass
 
 Ubidots client(TOKEN);
 
