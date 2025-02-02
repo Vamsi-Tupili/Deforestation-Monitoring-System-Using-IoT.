@@ -25,20 +25,20 @@ void loop()
    if (vw_get_message(buf, &buflen))  // when msg is received
      {
         digitalWrite(led,HIGH);
-        if(buf[1]=='2')     // check node number
+        if(buf[1]=='1')     // check node number
         {  
           //Serial.println("Node 1"); // print node number and
           //Serial.print("gas level: ");  // all sensor values
           for (i = 2; i < 4; i++) //Serial.print(buf[i]-48);             
           //Serial.println(" %"); 
-    gas_level = (buf[2]-48)*10 + (buf[3]-48)*1;
+          gas_level = (buf[2]-48)*10 + (buf[3]-48)*1;
            if(gas_level>gas_threshold) digitalWrite(siren,HIGH);          
            else digitalWrite(siren,LOW);   
          } 
-     if(buf[1]=='3')
+     if(buf[1]=='2')
         {  
           //Serial.println("Node 2");
-          //Serial.print("ir Level: "); 
+          //Serial.print("Fire Level: "); 
           for (i = 2; i < 4; i++) //Serial.print(buf[i]-48);             
           //Serial.println(" %");
           ir_level = (buf[2]-48)*10 + (buf[3]-48)*1;
@@ -50,6 +50,6 @@ void loop()
      //Serial.print("gas_level: ");
      Serial.print(gas_level );
      //Serial.print("fire_level: ");
-      Serial.println( fire_level);
+     Serial.println( fire_level);
   }
 
