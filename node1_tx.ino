@@ -17,7 +17,7 @@ void loop()
 {
   int gas,gas_level;
   gas=analogRead(MQ2_pin);    
-  gas_level=map(gas,0,1023,0,102);   // map them in the range between 0 to 99% 
+  gas_level=map(gas,0,1023,0,99);   // map them in the range between 0 to 99% 
   Serial.println("Node 2");   // serially print all values
   Serial.print("GAS level: ");    // for debugging
   Serial.print(gas_level);
