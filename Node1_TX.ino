@@ -3,7 +3,7 @@
 
 const int transmit_pin = 11;
 char str1[3];
-char node[3] = "03"; // node number. change this node number for
+char node[3] = "01"; // node number. change this node number for
 char trnsmit_str[4];// different node
 void setup()
 {
@@ -18,7 +18,7 @@ void loop()
   int gas,gas_level;
   gas=analogRead(MQ2_pin);    
   gas_level=map(gas,0,1023,0,99);   // map them in the range between 0 to 99% 
-  Serial.println("Node 2");   // serially print all values
+  Serial.println("Node 1");   // serially print all values
   Serial.print("GAS level: ");    // for debugging
   Serial.print(gas_level);
   Serial.println(" %");     // Flash a light to show transmitting
